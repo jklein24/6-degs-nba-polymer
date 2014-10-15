@@ -1,0 +1,15 @@
+{
+  "name": "PolymerStuff",
+  "description": "",
+  "homepage": "",
+  "keywords": [
+  ],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#master",
+    "polymer": "Polymer/polymer#master",
+    "paper-elements": "Polymer/paper-elements#master",
+    "font-roboto": "Polymer/font-roboto#master"
+  }
+}

@@ -1,0 +1,86 @@
+:host {
+  font-family: RobotoDraft, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+.content-wrapper {
+  margin: 0 50px;
+  padding: 50px 0;
+}
+
+.welcome {
+  margin-bottom: 50px;
+}
+
+#path {
+  margin-top: 100px;
+  text-align: center;
+}
+
+paper-input::shadow .tt-dropdown-menu {
+  max-height: 200px;
+  overflow: auto;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  margin-top: 7px;
+}
+
+paper-input::shadow .tt-suggestion.tt-cursor {
+  background-color: rgba(0,0,0,.1);
+}
+
+paper-input::shadow .tt-suggestion {
+  margin: 0;
+  padding: 5px;
+}
+
+
+core-toolbar {
+  background-color: #455ede;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+paper-button {
+  margin-top: 10px;
+  width: 10em;
+  color: white;
+  background-color: #455ede;
+}
+
+paper-input {
+  font-size: 16px;
+}
+
+paper-checkbox {
+  margin-left: 1em;
+}
+
+paper-fab {
+  position: absolute !important;
+  top: 35px;
+  right: 1em;
+  z-index: 1;
+}
+
+paper-tabs {
+  background-color: #5677fc;
+  color: #fff;
+}
+
+paper-tabs[noink][nobar] paper-tab.core-selected {
+  color: #ffff8d;
+}
