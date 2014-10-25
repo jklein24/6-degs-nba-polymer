@@ -1,5 +1,5 @@
 {
-  "name": "PolymerStuff",
+  "name": "6-Degrees-NBA",
   "description": "",
   "homepage": "",
   "keywords": [
@@ -10,6 +10,7 @@
     "core-elements": "Polymer/core-elements#master",
     "polymer": "Polymer/polymer#master",
     "paper-elements": "Polymer/paper-elements#master",
-    "font-roboto": "Polymer/font-roboto#master"
+    "font-roboto": "Polymer/font-roboto#master",
+    "typeahead": "twitter/typeahead.js#master"
   }
 }
