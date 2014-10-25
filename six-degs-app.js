@@ -1,10 +1,10 @@
 Polymer('six-degs-app', {
   getSourceValue: function() {
-    return this.$.source.querySelector("::Shadow #input").value;
+    return this.$.source.value;
   },
 
   getDestValue: function() {
-    return this.$.dest.querySelector("::Shadow #input").value;
+    return this.$.dest.value;
   },
 
   getPath: function() {
