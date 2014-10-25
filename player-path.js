@@ -7,6 +7,13 @@ Polymer('player-path', {
    */
   data: '',
 
+  publish: {
+    showteams: {
+      value: true,
+      reflect: true
+    }
+  },
+
   ready: function() {
     this.teamMap = {
       'AKF': "Akron Firestone Non-Skids",
@@ -158,6 +165,7 @@ Polymer('player-path', {
       'PHF': "Philadelphia Fox",
       'PHI': "Philadelphia 76ers",
       'PHM': "Phoenix Mercury",
+      'PHO': "Phoenix Suns",
       'PHP': "Philadelphia Phillies",
       'PHR': "Philadelphia Rage",
       'PHT': "Philadelphia Tapers",
@@ -244,9 +252,8 @@ Polymer('player-path', {
     return result.slice(0, -2);
   },
 
-  getPlayerName: function(player) {
-    var name = player.name;
-    var pieces = name.split(" ");
+  capitalize: function(playerName) {
+    var pieces = playerName.split(" ");
     for (var i = 0; i < pieces.length; i++) {
       var j = pieces[i].charAt(0).toUpperCase();
       pieces[i] = j + pieces[i].substr(1);

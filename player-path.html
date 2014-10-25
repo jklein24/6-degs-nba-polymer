@@ -1,4 +1,4 @@
-<html><head><link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
 <!--
 ##### Example
@@ -11,15 +11,24 @@
 @homepage https://.../x-polymerdemo
 -->
 
-</head><body><polymer-element name="player-path" attributes="data">
+<polymer-element name="player-path" attributes="data showteams" layout vertical center>
   <template>
     <link rel="stylesheet" href="player-path.css">
 	
 	<template repeat="{{connection,index in data}}">
-		<div id="data">{{connection.p2.name}} played with {{connection.p1.name}} on the {{connectionTeams[index]}}</div>
+		<div  hidden?="{{!showteams}}">
+			{{connection.p2.name | capitalize}} played with {{connection.p1.name | capitalize}} on the {{connectionTeams[index]}}
+		</div>
 	</template>
+	<div hidden?="{{showteams}}">
+		<template if="{{data.length > 0}}">
+			{{data[0].p2.name | capitalize}}
+		</template>
+		<template repeat="{{connection in data}}">
+			&rarr; {{connection.p1.name | capitalize}}
+		</template>
+	</div>
   </template>
 
   <script src="player-path.js"></script>
 </polymer-element>
-</body></html>

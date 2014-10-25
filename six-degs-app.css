@@ -16,6 +16,10 @@
   padding: 50px 0;
 }
 
+.show-teams-wrapper {
+  margin-top: 15px;
+}
+
 .welcome {
   margin-bottom: 50px;
 }
@@ -25,23 +29,23 @@
   text-align: center;
 }
 
-paper-input::shadow .tt-dropdown-menu {
+.tt-dropdown-menu {
   max-height: 200px;
   overflow: auto;
-  width: 320px;
+  width: 300px;
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   box-shadow: 0 5px 10px rgba(0,0,0,.2);
-  margin-top: 7px;
+  margin-top: -10px;
 }
 
-paper-input::shadow .tt-suggestion.tt-cursor {
+.tt-suggestion.tt-cursor {
   background-color: rgba(0,0,0,.1);
 }
 
-paper-input::shadow .tt-suggestion {
+.tt-suggestion {
   margin: 0;
   padding: 5px;
 }
@@ -63,10 +67,7 @@ paper-button {
 
 paper-input {
   font-size: 16px;
-}
-
-paper-checkbox {
-  margin-left: 1em;
+  width: 300px;
 }
 
 paper-fab {
@@ -83,4 +84,12 @@ paper-tabs {
 
 paper-tabs[noink][nobar] paper-tab.core-selected {
   color: #ffff8d;
+}
+
+paper-checkbox::shadow #ink {
+  color: #455ede;
+}
+
+paper-checkbox::shadow #checkbox.checked {
+  border-color: #455ede;
 }

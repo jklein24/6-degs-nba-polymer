@@ -1,4 +1,6 @@
 Polymer('six-degs-app', {
+  showTeams: true,
+
   getSourceValue: function() {
     return this.$.source.value;
   },
@@ -39,24 +41,24 @@ Polymer('six-degs-app', {
   ready: function() {
     $.getJSON('player-names.json')
         .done(function(data) {
-          $('#source').typeahead({
-            hint: true,
+          $('html /deep/ #source').typeahead({
+            hint: false,
             highlight: true,
             minLength: 1
           },
           {
-            name: 'states',
+            name: 'players',
             displayKey: 'value',
             source: this.substringMatcher(data)
           });
 
-          $('#dest').typeahead({
-            hint: true,
+          $('html /deep/ #dest').typeahead({
+            hint: false,
             highlight: true,
             minLength: 1
           },
           {
-            name: 'states',
+            name: 'players',
             displayKey: 'value',
             source: this.substringMatcher(data)
           });

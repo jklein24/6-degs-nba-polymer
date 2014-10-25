@@ -50,7 +50,10 @@
             Find path
           </paper-button>
         </div>
-        <player-path data="{{data}}"></player-path>
+        <div flex layout horizontal around-justified class="show-teams-wrapper">
+          <paper-checkbox label="Show Teams" checked="{{showTeams}}"></paper-checkbox>
+        </div>
+        <player-path showTeams?="{{showTeams}}" data="{{data}}"></player-path>
       </core-header-panel>
     </div>
 
