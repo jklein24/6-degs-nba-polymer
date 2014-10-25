@@ -14,8 +14,10 @@
 </head><body><polymer-element name="player-path" attributes="data">
   <template>
     <link rel="stylesheet" href="player-path.css">
-
-    <div id="data">{{data}}</div>
+	
+	<template repeat="{{connection,index in data}}">
+		<div id="data">{{connection.p2.name}} played with {{connection.p1.name}} on the {{connectionTeams[index]}}</div>
+	</template>
   </template>
 
   <script src="player-path.js"></script>
