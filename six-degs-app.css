@@ -71,26 +71,11 @@ paper-input {
   width: 300px;
 }
 
-paper-fab {
-  position: absolute !important;
-  top: 35px;
-  right: 1em;
-  z-index: 1;
-}
-
-paper-tabs {
-  background-color: #5677fc;
-  color: #fff;
-}
-
-paper-tabs[noink][nobar] paper-tab.core-selected {
-  color: #ffff8d;
-}
-
 paper-checkbox::shadow #ink {
   color: #455ede;
 }
 
 paper-checkbox::shadow #checkbox.checked {
+  background-color: #455ede;
   border-color: #455ede;
 }

@@ -1,4 +1,9 @@
 :host {
 	display: block;
-	margin-top: 30px;
+	margin-top: 20px;
+	position: relative;
+}
+
+.spinner-wrapper {
+	margin-bottom: 10px;
 }

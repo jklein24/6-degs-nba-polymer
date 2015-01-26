@@ -1,4 +1,5 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
 
 <!--
 ##### Example
@@ -11,16 +12,19 @@
 @homepage https://github.com/jklein24/6-degs-nba-polymer/blob/master/player-path.html
 -->
 
-<polymer-element name="player-path" attributes="data showteams" layout vertical center>
+<polymer-element name="player-path" attributes="data showteams loading" layout vertical center>
   <template>
     <link rel="stylesheet" href="player-path.css">
-	
+    <div class="spinner-wrapper" layout horizontal center-justified>
+		<paper-spinner active?="{{loading}}"></paper-spinner>
+	</div>
+
 	<template repeat="{{connection,index in data}}">
-		<div  hidden?="{{!showteams}}">
+		<div  hidden?="{{!showteams && !loading}}">
 			{{connection.p2.name | capitalize}} played with {{connection.p1.name | capitalize}} on the {{connectionTeams[index]}}
 		</div>
 	</template>
-	<div hidden?="{{showteams}}">
+	<div hidden?="{{showteams && !loading}">
 		<template if="{{data.length > 0}}">
 			{{data[0].p2.name | capitalize}}
 		</template>
