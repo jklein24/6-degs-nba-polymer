@@ -46,7 +46,7 @@
         </div>
 
         <div flex layout horizontal around-justified>
-          <paper-button raised on-click="{{getPath}}">
+          <paper-button raised on-tap="{{getPath}}">
             Find path
           </paper-button>
         </div>
@@ -57,7 +57,7 @@
       </core-header-panel>
     </div>
 
-    <core-ajax id="ajax" method="POST" url="http://localhost:8888/pathfinder"
+    <core-ajax id="ajax" method="POST" url="http://six-degrees-nba.appspot.com/pathfinder"
         body="{source:1, dest:2}" response="{{data}}" handleas="json">
     </core-ajax>
   </template>
